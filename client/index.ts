@@ -49,6 +49,10 @@ class UI {
 
 mp.events.add("guiReady", () => UI.initialize());
 
+mp.events.add("sayHelloToClient", (receivedData: any) => {
+  mp.gui.chat.push(receivedData);
+});
+
 /* This is an example of how you can pass the data from client to CEF using UI.emitCef */
 mp.events.add("playerCommand", (command) => {
   const args = command.split(/[ ]+/);

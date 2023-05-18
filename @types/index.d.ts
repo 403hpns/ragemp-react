@@ -10,4 +10,8 @@ declare global {
       removeHandler: (eventName: string, handler: (props: any) => void) => void;
     };
   }
+
+  interface Mp {
+    trigger: (eventName: string, args: unknown) => void;
+  }
 }

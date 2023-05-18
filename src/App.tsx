@@ -18,6 +18,12 @@ function App() {
         This is an example of how you can create your own project with the React
         library.
       </p>
+      <button
+        onClick={() => mp.trigger("sayHelloToClient", "Greetings from React!")}
+        className="py-2 px-4 rounded-sm font-semibold text-gray-100 bg-black/20"
+      >
+        Send data to client
+      </button>
     </div>
   );
 }
